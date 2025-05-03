@@ -21,17 +21,17 @@ const About = () => {
   return  <>
   <div className='mainhero'>
         <div className='hero-sub-content'>
-          <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: '16%', width:'70%'}} className='col-span-3'>
+          <div style={{ display: 'flex',  marginLeft: '16%', width:'60%'}} className='col-span-3 mt-[20%]'>
             <div>
               <div className='title-home'>About us</div>
-              <div className='text-7xl font-bold '>Mindfull design <br /> for meaningfull <br /> brand</div>
-             
-              <p className='main-content mt-1 text-gray-400'>
+              <div className='text-7xl font-bold '>Inspired 
+             <br /> by Vision</div>
+              <p className='main-content mt-3 text-gray-400'>
               At <span className='font-semibold '>Mindfull</span> , we design with purpose blending creativity and strategy to  craft brand identities that resonate.  Our mission is to  transform ideas into impactful, customer-centric  experiences that drive success.
               </p>
             </div>
           </div>
-          <div className='col-span-2'>
+          {/* <div className='col-span-2'>
             <iframe 
               width="490" 
               height="415" 
@@ -42,7 +42,7 @@ const About = () => {
               referrerPolicy="strict-origin-when-cross-origin" 
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -1,8 +1,53 @@
-import React from 'react'
-import { call, facebook, insta, linkdin, location, mail, mail2, massage, mindfulllogo, wp } from '../assets/img/logos'
+import React, { useState } from 'react'
+import { call, facebook, insta, linkdin,  mail, mail2, massage, mindfulllogo, wp } from '../assets/img/logos'
 import { NavLink } from 'react-router-dom'
 
 const ContactusFooter = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  // const response = await fetch('home/thebutt/admin.mindfull.co.in/api/contact', {
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ success: true, message: data.message });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus({ success: false, message: data.error || 'Failed to send message' });
+      }
+    } catch (error) {
+      setSubmitStatus({ success: false, message: 'Network error. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return <>
   <div className=" py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -78,65 +123,83 @@ const ContactusFooter = () => {
               </div>
             </div>
   
-            {/* Right Column - Contact Info */}
-            <div className="lg:w-1/2 bg-white p-9">
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Get In Touch</h3>
-                <p className="text-gray-600">
-                  we help you to unleash the power within your business
-                </p>
-              </div>
-  
-              <form className="space-y-1">
-                <div>
-                  {/* <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label> */}
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder='Name'
-                    className="mt-5 text-black block w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
-                  />
-                </div>
-  
-                <div>
-                  {/* <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label> */}
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder='Email'
-                    className="mt-5 block text-black w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
-                  />
-                </div>
-  
-                <div>
-                  {/* <label htmlFor="subject" className="block  text-sm font-medium text-gray-700">Subject</label> */}
-                  <input
-                    type="text"
-                    id="subject"
-                    placeholder='Subject'
-                    className="mt-1 block w-full border-b text-black border-gray-900 py-2 focus:outline-none focus:border-gray-500"
-                  />
-                </div>
-  
-                <div>
-                  {/* <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label> */}
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder='Message'
-                    className="mt-5 mb-10 block w-full border-b text-black border-gray-900 py-1 focus:outline-none focus:border-gray-500"
-                  ></textarea>
-                </div>
-  
-                <button
-                  type="submit"
-                  style={{backgroundColor:'#11526B'}}
-                  className=" text-white px-20 py-3 rounded-md transition-colors"
-                >
-                  Submit
-                </button>
-              </form>
+           {/* Right Column - Contact Form */}
+           <div className="lg:w-1/2 bg-white p-9">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get In Touch</h3>
+              <p className="text-gray-600">
+                We help you to unleash the power within your business
+              </p>
             </div>
+
+            {submitStatus && (
+              <div className={`mb-4 p-3 rounded ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                {submitStatus.message}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-1">
+              <div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="mt-5 text-black block w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="mt-5 block text-black w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="mt-1 block w-full border-b text-black border-gray-900 py-2 focus:outline-none focus:border-gray-500"
+                />
+              </div>
+
+              <div>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="mt-5 mb-10 block w-full border-b text-black border-gray-900 py-1 focus:outline-none focus:border-gray-500"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                style={{ backgroundColor: '#11526B' }}
+                className="text-white px-20 py-3 rounded-md transition-colors disabled:opacity-50"
+              >
+                {isSubmitting ? 'Sending...' : 'Submit'}
+              </button>
+            </form>
+          </div>
           </div>
         </div>
       </div>

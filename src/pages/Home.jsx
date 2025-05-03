@@ -18,6 +18,33 @@ const Home = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const desktopContainerRef = useRef(null);
+    const mobileContainerRef = useRef(null);
+    
+
+    // Common handler for both desktop and mobile
+    const handleDragStart = (e, ref) => {
+        setIsDragging(true);
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        setStartX(clientX - ref.current.offsetLeft);
+        setScrollLeft(ref.current.scrollLeft);
+        ref.current.style.cursor = 'grabbing';
+    };
+
+    const handleDragMove = (e, ref) => {
+        if (!isDragging) return;
+        
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const x = clientX - ref.current.offsetLeft;
+        const walk = (x - startX) * 3; // Increased multiplier for better scroll
+        ref.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleDragEnd = (ref) => {
+        setIsDragging(false);
+        ref.current.style.cursor = 'grab';
+    };
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -86,24 +113,24 @@ const imagesicons = [
     <>
       <div className='mainhero'>
         <div className='hero-sub-content'>
-          <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'end', marginLeft: '20%' }} className='col-span-2'>
+        <div style={{ display: 'flex',}} className='md:col-span-2 ml-32'>
             <div>
-              <div className='text-7xl font-bold ml-9'>We</div>
+              <div className='text-7xl font-bold md:ml-9 sm:mt-40'>We</div>
               <div className='flex gap-2 items-center'>
                 <div 
                   className={`w-6 h-6 rounded-full mt-7 ${currentColorClass}`}
                 ></div>
                 <div className='text-7xl font-bold'>{currWord}</div>
               </div>
-              <p className='main-content mt-4'>
+              <p className='main-content mt-4 w-96'>
                 From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
               </p>
-              <button className="bg-transparent mt-4 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
+              <button  className="bg-transparent mt-4 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
                 Get Started
               </button>
             </div>
           </div>
-          <div className='col-span-3'>
+          {/* <div className='col-span-3'>
             <iframe 
               width="670" 
               height="415" 
@@ -114,113 +141,22 @@ const imagesicons = [
               referrerPolicy="strict-origin-when-cross-origin" 
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="ticker-container">
-        <div className="ticker-content">
-          <div  className="ticker-item"> <span className='lightpink'>150+</span> Happy Customers || <span className='purplle'>12+</span>  Years of Experience || <span className='blue'>15+</span>  Team Members || <span className='lightblue'>200+</span>  Project Completed</div>
-        </div>
-      </div>
-    {/* binto scroll grid */}
-      {/* <div className="grid grid-cols-6 grid-rows-3 gap-2">
 
 
-<img src={Macbookpro} alt="Building View" className="w-full h-full object-cover rounded-lg" />
 
-      <div className="col-span-2 row-span-1">
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery2} alt="Elderly Couple" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-2">
-        <img src={gallery3} alt="Top View Building" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-2">
-        <img src={gallery4} alt="Aerial Building" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery5} alt="Outdoor Gym" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery6} alt="Jogging Couple" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery7} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery8} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery9} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery10} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery11} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery12} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery13} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery14} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery15} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery16} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery17} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery18} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery19} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery20} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-      <div className="col-span-2 row-span-1">
-        <img src={gallery21} alt="Yoga Group" className="w-full h-full object-cover rounded-lg" />
-      </div>
-    </div> */}
-         {/* <div className="relative">
-      <div className="w-full h-1 bg-blue-600 mb-1" />
-
-      <div className="overflow-x-auto">
-        <div
-          className="grid grid-flow-col auto-cols-[minmax(100px,_1fr)] grid-rows-3 gap-3 px-4 py-2 w-max"
-        >
-          {images.map((item, index) => (
-            <div
-              key={index}
-              className={`col-span-${item.colSpan} row-span-${item.rowSpan} `}>
-              <img
-                src={item.src}
-                alt={`gallery-${index}`}
-                className="w-auto object-cover rounded-lg shadow"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div> */}
-
-
-    <div style={{padding:'10px 70px 10px 70px'}}>
+    <div style={{padding:'40px 10px 0px 60px'}}>
       <p className='text-xl'>We Believe</p>
 <div className='text-5xl text-center' >Great brands <span className='lightpink font-semibold'>aren’t just seen;</span>  they are <span className='lightblue font-semibold'>felt, experienced, and remembered.</span>  At Mindfull, we blend <span className='purplle font-semibold'>creativity with strategy</span>  to build identities that leave a lasting impact.</div>
     </div>
 
 {/* swiper */}
 <Myswiper/>
+<div>
+
+{/* </div> */}
 {/* icons scroll */}
 <div className="ticker-container">
         <div className="ticker-content">
@@ -228,42 +164,38 @@ const imagesicons = [
           <div  className="ticker-item"> 
              <img
              src={item.src}
-             alt={`gallery-${index}`} className='w-44'
+             alt={`gallery-${index}`} className='w-72 px-14'
              />
           </div>
           ))}
         </div>
       </div>
-
-{/* <div style={{width:'300vw', }}>
-<img src={group} style={{height:'50vh', width:'800vw'}} alt="" />
-</div> */}
-{/* <div class="relative  overflow-x-auto cursor-pointer">
-  <div class="mx-auto w-[99vw] h-[52vh] overflow-x-auto scrollbar">
-    <div class="w-[300vw]">
-      <img src={group} class="h-[50vh] w-[800vw]" alt="" />
-    </div>
-  </div>
-</div> */}
- {/* <div className="relative overflow-x-auto cursor-pointer">
-      <div
-        ref={containerRef}
-        className="mx-auto w-[99vw] h-[52vh] overflow-x-auto scrollbar select-none"
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        style={{ cursor: 'grab' }}
-      >
-        <div className="w-[300vw]">
-          <img src={group} className="h-[50vh] w-[800vw] pointer-events-none" alt="" />
+<div className="ticker-container-text">
+        <div className="ticker-content">
+          <div  className="ticker-item"> <span className='lightpink'>150+</span> Happy Customers || <span className='purplle'>12+</span>  Years of Experience || <span className='blue'>15+</span>  Team Members || <span className='lightblue'>200+</span>  Project Completed</div>
         </div>
       </div>
-      </div> */}
+
+                <div className="relative">
+                    <div
+                        ref={desktopContainerRef}
+                        className="mx-auto w-[99vw] h-[40vh] sm:h-[52vh] overflow-x-auto scrollbar select-none"
+                        onMouseDown={(e) => handleDragStart(e, desktopContainerRef)}
+                        onMouseLeave={() => handleDragEnd(desktopContainerRef)}
+                        onMouseUp={() => handleDragEnd(desktopContainerRef)}
+                        onMouseMove={(e) => handleDragMove(e, desktopContainerRef)}
+                        style={{ cursor: 'grab' }}
+                    >
+                        <div className="w-[320vw]">
+                            <img src={group} className="h-[38vh] sm:h-[50vh] w-[390vw] pointer-events-none object-cover" alt="" />
+                        </div>
+                    </div>
+                </div>
 
 {/*Industries  */}
-<div className='title-home mb-24 ml-48 '>Industries we serve</div>
-      <img src={Industries} alt="" style={{width:'100%', marginBottom:'40px'}} />
+<div className='title-home mb-3 ml-32'>Industries we serve</div>
+      <img src={Industries} alt="" style={{width:'100%'}} />
+      </div>
     </>
   );
 };

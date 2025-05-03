@@ -4,6 +4,51 @@ import { NavLink } from 'react-router-dom'
 import "./../assets/css/footer.css"
 
 const MyFooter = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  // const response = await fetch('http://localhost:5000/api/contact', {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    try {
+      const response = await fetch('home/thebutt/admin.mindfull.co.in/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ success: true, message: data.message });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus({ success: false, message: data.error || 'Failed to send message' });
+      }
+    } catch (error) {
+      setSubmitStatus({ success: false, message: 'Network error. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const [showCopied, setShowCopied] = useState(false);
   const phoneNumber = '+917980009725';
   const displayNumber = '+917980009725';
@@ -169,18 +214,7 @@ const MyFooter = () => {
 
             {/* Social Media */}
             <div className="flex space-x-6 pt-3">
-              {/* <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <span>in</span>
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <span>f</span>
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <span>ig</span>
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <span>✉️</span> */}
-              {/* </a> */}
+
               <div className='w-8 h-8' style={{cursor:'pointer'}} >
                 <a href="https://www.linkedin.com/company/mindfull-creative-studio/" target="_blank" rel="noreferrer" >
               <img src={linkdin} alt="" /> </a>
@@ -200,47 +234,80 @@ const MyFooter = () => {
           </div>
           </div>
 
-          {/* Right Column - Contact Form */}
-          <div className="bg-white p-8 rounded-md text-black" >
-            <div className="">
+            <div className=" bg-white p-7 rounded-md">
+            {/* <div className=""> */}
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get In Touch</h3>
+              <p className="text-gray-600">
+                We help you to unleash the power within your business
+              </p>
+
+            {submitStatus && (
+              <div className={`mb-4 p-3 rounded ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                {submitStatus.message}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-1">
               <div>
-                <h2 className="text-2xl font-medium text-[#2a2a8f] mb-2">Get In Touch</h2>
-                <p className="text-gray-700 text-sm mb-4">we help you to unleash the power within your business</p>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="mt-3 text-black block w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
+                />
               </div>
 
-              <form className="space-y-4 ">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    className="border-b border-gray-300 rounded-none w-full px-0 focus:ring-0 text-black"
-                    />
-                    </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="border-b border-gray-300 rounded-none w-full px-0 focus:ring-0 focus:border-gray-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="border-b border-gray-300 rounded-none w-full px-0 focus:ring-0 focus:border-gray-500"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Message"
-                    className="border-b border-gray-300 rounded-none w-full px-0 focus:ring-0 focus:border-gray-500 min-h-[100px]"
-                  />
-                </div>
-                <div>
-                  <button className="w-full bg-[#0e6973] hover:bg-[#0a5761] text-white rounded">Submit</button>
-                </div>
-              </form>
-            </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="mt-3 block text-black w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="mt-3 block w-full border-b text-black border-gray-900 py-1 focus:outline-none focus:border-gray-500"
+                />
+              </div>
+
+              <div>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="mt-3 mb-4 block w-full border-b text-black border-gray-900 py-1 focus:outline-none focus:border-gray-500"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                style={{ backgroundColor: '#11526B' }}
+                className="text-white px-20 py-3 rounded-md transition-colors disabled:opacity-50"
+              >
+                {isSubmitting ? 'Sending...' : 'Submit'}
+              </button>
+            </form>
           </div>
         </div>
 

@@ -28,7 +28,7 @@
    }
    .hero-sub-content{
      height: 90vh;    
-     @apply grid grid-cols-5 gap-4 content-center place-content-center;
+     @apply grid grid-cols-5 gap-4 ;
      position: absolute;
    }
    .title-home {
