@@ -24,9 +24,9 @@ const Navigationbar = () => {
   return (
     <nav className="navbar-container">
       <div className="navbar-logo">
-        <span className="logo-text">
-          <img src={mindfull} alt="Logo" width={50} />  <span className="word-cycler">.  {currWord}</span>
-        </span>
+        <NavLink to="/" className="logo-text">
+          <img src={mindfull} alt="Logo" width={50}  />  <span className="word-cycler">.  {currWord}</span>
+        </NavLink>
       </div>
       
       {/* Desktop Navigation */}

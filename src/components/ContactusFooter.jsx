@@ -168,7 +168,6 @@ const ContactusFooter = () => {
                 <span className='text-black'>marketing@mindfull.co.in</span>
               </a>
             </div>
-
         </div>
 
         {/* Copyright */}
