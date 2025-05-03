@@ -34,3 +34,4 @@ export { default as mail2 } from "./mail2.png";
 export { default as wp } from "./wp.png";
 export { default as call } from "./call.png";
 export { default as facebook } from "./facebook.png";
+

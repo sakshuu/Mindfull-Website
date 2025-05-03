@@ -62,6 +62,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { MyFooter, Navigationbar } from './components';
 import { About, Contactus, Home, OurServices, Page404 } from './pages';
 import { loading } from './assets/videos';
+import ContactusFooter from './components/ContactusFooter';
 
 // Create a simple Loader component (you can customize this)
 const Loader = () => {
@@ -107,10 +108,9 @@ const AppContent = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time (replace with your actual loading logic)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // 2 seconds loading time
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -129,7 +129,15 @@ const AppContent = () => {
         <Route path='/contactus' element={<Contactus/>}></Route>
         <Route path='*' element={<Page404/>}></Route>
       </Routes>
-      {!is404Page && <MyFooter/>}
+      {/* {!is404Page && <MyFooter/> && <ContactusFooter/>} */}
+       {/* Updated footer logic */}
+       {!is404Page && (
+        location.pathname === '/contactus' ? (
+          <ContactusFooter />
+        ) : (
+          <MyFooter />
+        )
+      )}
     </div>
   );
 }

@@ -13,13 +13,12 @@ const WeBelieve = () => {
         "Others"
       ];
       
-      const [activeCard, setActiveCard] = useState(null);
       const weBelieve = [
         {
           id: '1',
           number: '150+',
           title: 'Happy Customers',
-          shadowColor: '#A84A94', // Pink
+          shadowColor: '#A84A94', 
           numberColor: '#A84A94'  // Matching pink
         },
         {
@@ -139,81 +138,26 @@ const WeBelieve = () => {
 </div>
 </div> 
 </div> 
-  {/* <div className='grid grid-cols-3 gap-4 content-center place-content-center p-20'> */}
-    {/* <div className='col-span-2' >
-<div>We Believe</div>
-<div className='mb-8'>Our services have a proven track record of boosting businesses</div>
-<div className='grid grid-cols-2 gap-2 '>
-{weBelieve.map((cards, index) => (
-        <div key={index.id}  className='col-span-1 mb-6 h-48 p-12 rounded-2xl ' style={{backgroundColor:'#111111', width:'80%'}}> 
-            <div className='flex justify-center'>
-<div>
-        <div style={{color:'#A84A94'}} className='text-center text-5xl font-semibold'>{cards.number}</div>
-        <div className='text-white text-xl mt-1'>{cards.title}</div>
-</div>
-            </div>
+    
+    <div className="flex flex-wrap justify-between p-10 md:p-20  min-h-screen">
+      {aboutImag.map((item) => (
+        <div key={item.id} className="w-full md:w-1/3 px-5 mb-8 md:mb-0 relative">
+          <div className="relative">
+            <img
+              src={item.src|| "/placeholder.svg"}
+              alt={item.title}
+              width={400}
+              height={600}
+              className="w-full h-auto"
+            />
 
-        </div>
-      ))}
-      </div>
-    </div> */}
-     {/* <div className='col-span-2 px-4  md:px-8 lg:px-12'>
-      <div className='text-3xl font-bold text-white mb-1'>We Believe</div>
-      <div className='text-lg text-gray-300 mb-10 max-w-2xl'>
-        Our services have a proven track record of boosting businesses
-      </div>
-      
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8'>
-        {weBelieve.map((card) => (
-          <div 
-            key={card.id}
-            className='bg-[#111111] rounded-2xl p-14 transition-all duration-300  hover:shadow-lg'
-          >
-            <div className='flex flex-col items-center justify-center h-full'>
-              <div className='text-5xl md:text-6xl font-bold  text-[#A84A94]'>
-                {card.number}
-              </div>
-              <div className='text-xl text-white text-center'>
-                {card.title}
-              </div>
+            <div className="absolute md:bottom-[12%] xl:bottom-[20%] left-0 right-0 text-center md:px-6 xl:px-20 ">
+              <h3 className="text-white md:text-xl xl:text-3xl mb-6">{item.title}</h3>
+              <p className="text-gray-300 md:text-lg xl:tetx-1xl">{item.desc}</p>
             </div>
           </div>
-        ))}
-      </div>
-    </div> */}
-
-
-
-  {/* <div className="timeline-container col-span-1 mt-28" >
-      {points.map((point, index) => (
-        <div 
-          key={`${animationCycle}-${index}`} // Unique key for each animation cycle
-          className={`timeline-item ${index <= visiblePoints ? 'visible' : ''}`}
-        >
-          <div className="timeline-dot"></div>
-          {index < points.length - 1 && (
-            <div className={`timeline-connector ${index < visiblePoints ? 'visible' : ''}`}></div>
-          )}
-          <div className="timeline-content">{point}</div>
         </div>
       ))}
-    </div> */}
-    {/* </div> */}
-<div  >
-
-    <div className='flex justify-between mb-4 relative p-20 '>
-    {aboutImag.map((item, index) => (
-        <div >
-        <img src={item.src} alt="" style={{height:'95vh'}} />
-        {/* <div className='flex justify-center gap-10 '> */}
-            <div className='absolute bottom-48' style={{width:'13%', marginLeft:'69px'}}> 
-            <div className='text-center mb-6 text-xl'>{item.title}</div>
-        <div className='text-center text-sm text-gray-300'>{item.desc}</div>
-            </div>
-        </div>
-        // </div>
-    ))}
-    </div>
     </div>
 
   </>

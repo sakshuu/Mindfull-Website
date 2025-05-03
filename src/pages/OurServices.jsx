@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { icon1, icon2, icon3, icon4, icon5, leftarrow, rightarrow } from '../assets/img/services';
+import { icon1, icon2, icon3, icon4, icon5, service1 , service2, service3, service4, service5, service6, service7, service8, service9,service10,service11,service12,service13,service14,service15,service16,service17,service18,service19,service20, industries} from '../assets/img/services';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./../assets/css/services.css"
 import { Navigation } from 'swiper/modules';
@@ -22,31 +22,29 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
       
       const cardColors = ['#E6BDFF', '#F8E8ED', '#D4E2FF', '#E6BDFF', '#F8E8ED']
       
-
-
       const ourWorks = [
         {
           id:'1',
           icon:icon1,
-          title:'UI/UX & Web Solutions',
+          title:'UI/UX & Web Solutions .',
           desc:'We design intuitive digital experiences that don’t just look good—they work seamlessly. From responsive websites to user-friendly platforms, we craft interfaces that guide, engage, and convert. Our thoughtful approach to UI/UX has helped brands simplify the user journey and increase online engagement meaningfully.',
           images: [
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
+            service1,
+            service2,
+            service3,
+            service4,
           ]
         },
         {
           id:'2',
           icon:icon2,
-          title:'Digital Presence & Performance Marketing eiusmod.',
+          title:'Digital Presence & Performance Marketing .',
           desc:'We help brands be seen—and remembered.With a mix of strategy, creativity, and analytics, our performance marketing solutions have helped clients grow online, connect with their ideal audience, and achieve consistent, trackable growth across platforms.',
           images: [
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
+            service5,
+            service6,
+            service7,
+            service8,
           ]
         },
         {
@@ -55,10 +53,10 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
           title:'Branding & Identity Design',
           desc:'In a busy world, visuals capture attention first. We produce visuals—photos, videos, graphics—that captivate and communicate your story clearly. Our content has helped brands grab attention, boost engagement, and express their identity in ways that truly resonate with audiences.',
           images: [
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
+            service9,
+            service10,
+            service11,
+            service12,
           ]
         },
         {
@@ -67,10 +65,10 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
           title:'Visual Content Creation',
           desc:'We help brands be seen—and remembered.With a mix of strategy, creativity, and analytics, our performance marketing solutions have helped clients grow online, connect with their ideal audience, and achieve consistent, trackable growth across platforms.',
           images: [
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
+            service13,
+            service14,
+            service15,
+            service16,
           ]
         },
         {
@@ -79,208 +77,98 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
           title:'Marketing Collateral & Advertising ',
           desc:'We turn ideas into impactful campaigns and collaterals that stick. From brochures to billboards, print ads to digital banners, we ensure every asset tells your story with clarity and creativity. Our work has helped brands leave lasting impressions and spark real-world results.',
           images: [
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
-            Macbookpro,
+            service17,
+            service18,
+            service19,
+            service20,
           ]
         },
       ]
 
   return  <>
    <div className='mainhero'>
-        {/* <div className='hero-sub-content'> */}
-          <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'end', }}>
+          <div style={{ display: 'flex', width:'70%' , padding:'8%'}}>
             <div>
-              <div className='text-7xl font-bold ml-9'>Powerful process; <br /> Powerful products</div>
+              <div className='py-6 text-xl text-gray-400'>Our Service</div>
+              <div className='text-7xl font-bold'>Helping brands grow, <br /> connect, and thrive</div>
 
-              <p className='main-content mt-4'>
-                From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
-              </p>
-
+              <p className='main-content mt-4 text-1xl'>
+              At <span>Mindfull</span>, we help brands grow by creating meaningful connections and delivering impactful solutions. Through creativity and strategy, we ensure your brand thrives and stands out in a competitive world.
+               </p>
+               <button  className="bg-transparent mt-7 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
+                Get Started
+              </button>
             </div>
           </div>
-        
-        {/* </div> */}
-      </div>
-{/* 
-<div className="main-box">
+              </div>
 
-<div className='swiper-slide-container'>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-{
-  ourWorks.map(item => <>
-        <SwiperSlide key={item.id} >
-    <div className='flex gap-4 '>
-      <div>
-        <div className='text-gray-950'>
-          <img src={item.icon} style={{width:'20px'}} alt="" />
-        </div>
-        <div className='text-gray-950'>{item.title}</div>
-        <div className='text-gray-950'>{item.desc}</div>
+
+              <div className='pl-32 mb-10 mt-10'>
+<div className='text-xl text-gray-500 mb-1'>Our Work</div>
+      <div className='text-lg text-gray-300  max-w-2xl'>
+      Our services have a proven track <br /> record of boosting businesses
       </div>
-      <div>
-        <img src={item.image1} style={{width:'40px'}} alt="ourworks" />
-        <img src={item.image2} style={{width:'40px'}} alt="ourworks" />
-        <img src={item.image3} style={{width:'40px'}} alt="ourworks" />
-        <img src={item.image4} style={{width:'40px'}} alt="ourworks" />
-      </div>
-    </div>
-          </SwiperSlide>
-  </>)}
-      </Swiper>
 </div>
-</div> */}
 
-{/* <div className="relative  py-16">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="relative">
-          <Swiper
-            modules={[Navigation]}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }}
-            spaceBetween={30}
-            slidesPerView={1}
-            className="services-swiper"
-          >
-            {ourWorks.map((item) => (
-              <SwiperSlide key={item.id}>
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                  <div className="lg:w-1/2">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                      {item.title}
-                    </h2>
-                    <p className="text-lg text-gray-600 leading-relaxed">
-                      {item.desc}
-                    </p>
+<div className='px-4 lg:px-32 cursor-pointer mb-8'>
+{ourWorks.map((item, index) => (
+<div className="flex flex-col lg:flex-row gap-4 mt-10">
+              {/* Text content */}
+              <div 
+                className="lg:w-1/2 rounded-lg xl:p-7 md:p-4"
+                style={{ backgroundColor: cardColors[index % cardColors.length] }}
+              >
+                <div className="xl:py-20 mb:py-2">
+                  <div className="mb-4">
+                    <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
                   </div>
-                  
-                  <div className="lg:w-1/2">
-                    <div className="grid grid-cols-2 gap-4">
-                      {item.images.map((image, idx) => (
-                        <div 
-                          key={idx}
-                          className="relative overflow-hidden rounded-lg aspect-square "
-                        >
-                          <img
-                            src={image}
-                            alt={`${item.title} example ${idx + 1}`}
-                            className="absolute inset-0 w-full h-full object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <h2 className="xl:text-2xl md:text-xl md:mb-4 font-bold text-black xl:mt-8">
+                    {item.title}
+                  </h2>
+                  <p className="xl:text-lg md:text-sm text-black leading-relaxed xl:mt-8">
+                    {item.desc}
+                  </p>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          <div className="flex items-center justify-end mt-8 space-x-4">
-            <button className="swiper-button-prev flex items-end justify-end w-12 h-12 rounded-full bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button className="swiper-button-next flex items-center justify-center w-12 h-12 rounded-full bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div> */}
- <div className="relative py-16 px-4 sm:px-6 lg:px-8 mx-auto" style={{width:'85vw'}}>
-        <div className="relative">
-          {/* Navigation buttons positioned outside the padded content */}
-          <div className="absolute inset-y-0 left-0 flex items-center -ml-12 z-10">
-            <button className="swiper-button-prev bg-gray-500 rounded-full shadow-md transition-colors">
-              {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg> */}
-              <img src={leftarrow} className='min-w-6' alt="" />
-            </button>
-          </div>
-          
-          <div className="absolute inset-y-0 right-0 flex items-center -mr-12 z-10">
-            <button className="swiper-button-next bg-gray-500 rounded-full p-3 shadow-md  transition-colors">
-              <img src={rightarrow} className='min-w-6' alt="" />
-              {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg> */}
-            </button>
-          </div>
-
-          {/* Padded content area */}
-          <div className="px-8 sm:px-12 lg:px-16 cursor-pointer">
-            <Swiper
-              modules={[Navigation]}
-              navigation={{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              }}
-              spaceBetween={30}
-              slidesPerView={1}
-              className="services-swiper"
-            >
-              {ourWorks.map((item, index) => (
-                <SwiperSlide key={item.id}>
-                  <div className="flex flex-col lg:flex-row gap-4">
-                    {/* Text content with dynamic background color */}
+              </div>
+              
+              {/* Images grid with square boxes */}
+              <div className="lg:w-1/2">
+                <div className="grid grid-cols-2 gap-4">
+                  {item.images.map((image, idx) => (
                     <div 
-                      className="lg:w-1/2 rounded-lg md:p-12 xl:p-20"
-                      style={{ backgroundColor: cardColors[index % cardColors.length] }}
+                      key={idx} 
+                      className="relative overflow-hidden group"
+                      style={{ paddingBottom: '100%' }} // Creates square container
                     >
-                      <div className='mb-4'>
-                        <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
-                      </div>
-                      <h2 className="text-2xl font-bold text-black   xl:mt-8">
-                        {item.title}
-                      </h2>
-                      <p className="text-lg text-black leading-relaxed xl:mt-8">
-                        {item.desc}
-                      </p>
+                      <img
+                        src={image}
+                        alt={`${item.title} example ${idx + 1}`}
+                        className="absolute top-0 left-0 w-full h-full object-cover filter grayscale transition-all duration-300 group-hover:grayscale-0"
+                      />
                     </div>
-                    
-                    {/* Images grid */}
-                    <div className="lg:w-1/2">
-                      {/* <div className="grid grid-cols-2 gap-4">
-                        {item.images.map((image, idx) => (
-                          <div key={idx} className="relative overflow-hidden aspect-square rounded-lg">
-                            <img
-                              src={image}
-                              alt={`${item.title} example ${idx + 1}`}
-                              className="absolute inset-0 w-full h-full object-cover"
-                            />
-                          </div>
-                        ))}
-                      </div> */}
-
-                       <div className="grid grid-cols-2 gap-4">
-                        {item.images.map((image, idx) => (
-                          <div 
-                            key={idx} 
-                            className="relative overflow-hidden aspect-square rounded-lg group"
-                          >
-                            <img
-                              src={image}
-                              alt={`${item.title} example ${idx + 1}`}
-                              className="absolute inset-0 w-full h-full object-cover filter grayscale transition-all duration-300 group-hover:grayscale-0"
-                            />
-                          </div>
-                        ))}
-                      </div> 
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+        ))}
         </div>
-      </div>
+
+<div className='pl-32'>
+        <div className=' text-xl text-gray-400'>Our Industries</div>
+        <div className='text-xl '>We don't just know industries—we understand <br />
+                                            how to make brands thrive within them.
+
+</div>
+</div>
+<div className='flex justify-center py-10'>
+  <div>
+ <img src={industries} style={{width:'80vw'}} alt=""  />
+  </div>
+</div>
+
+
+
+
   </>
 }
 
