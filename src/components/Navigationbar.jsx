@@ -41,15 +41,13 @@ const Navigationbar = () => {
         <NavLink 
           to="/about" 
           className={({ isActive }) => 
-            `nav-link ${isActive ? 'nav-link-active' : ''}`}
-        >
+            `nav-link ${isActive ? 'nav-link-active' : ''}`} >
           About Us
         </NavLink>
         <NavLink 
           to="/services" 
           className={({ isActive }) => 
-            `nav-link ${isActive ? 'nav-link-active' : ''}`}
-        >
+            `nav-link ${isActive ? 'nav-link-active' : ''}`}  >
           Services
         </NavLink>
         <NavLink  target="_blank" rel="noreferrer"

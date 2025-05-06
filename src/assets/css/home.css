@@ -33,6 +33,7 @@
   .swiper-slide-home{
 /* background-color: brown */
 background-image: url(./../img/home/swiperbg.png);
+background-repeat: no-repeat;
 /* height: 73vh; */
 margin-top: 3%
   }
