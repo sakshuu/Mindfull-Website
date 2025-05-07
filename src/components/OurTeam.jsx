@@ -239,17 +239,6 @@ const OurTeam = () => {
     },
     {
       id: "4",
-      fullName: "Tarun Jain",
-      name: "Tarun",
-      profile: Tarun,
-      bigprofile: bigprofiletarun,
-      roll: "Chief Marketing executive",
-      thought:
-        "we help you to unleash the power within your businesswe help you to unleash the power within your business",
-      bgColor: "bg-red-600",
-    },
-    {
-      id: "5",
       fullName: "Sanket Taware",
       name: "Sanket",
       profile: Sanket,
@@ -260,7 +249,7 @@ const OurTeam = () => {
       bgColor: "bg-yellow-600",
     },
     {
-      id: "6",
+      id: "5",
       fullName: "Shantanu patil",
       name: "Shantanu",
       profile: Shantanu,
@@ -271,7 +260,7 @@ const OurTeam = () => {
       bgColor: "bg-pink-600",
     },
     {
-      id: "7",
+      id: "6",
       fullName: "Janhavi Patil",
       name: "Janhavi",
       profile: Janhavi,
@@ -282,7 +271,7 @@ const OurTeam = () => {
       bgColor: "bg-teal-600",
     },
     {
-      id: "8",
+      id: "7",
       fullName: "Suhas Bandebuche",
       name: "Suhas",
       profile: Suhas,
@@ -293,7 +282,7 @@ const OurTeam = () => {
       bgColor: "bg-orange-600",
     },
     {
-      id: "9",
+      id: "8",
       fullName: "Sudipto Adhikary",
       name: "Sudipto",
       profile: Sudipto,
@@ -304,7 +293,7 @@ const OurTeam = () => {
       bgColor: "bg-cyan-600",
     },
     {
-      id: "10",
+      id: "9",
       fullName: "Sonali Umrikar",
       name: "Sonali",
       profile: Sonali,
@@ -315,7 +304,7 @@ const OurTeam = () => {
       bgColor: "bg-violet-600",
     },
     {
-      id: "11",
+      id: "10",
       fullName: "Sakshi Bodke",
       name: "Sakshi",
       profile: Gauri,
@@ -326,7 +315,7 @@ const OurTeam = () => {
       bgColor: "bg-rose-600",
     },
     {
-      id: "12",
+      id: "11",
       fullName: "Rohit patil",
       name: "Rohit",
       profile: Rohit,
@@ -337,7 +326,7 @@ const OurTeam = () => {
       bgColor: "bg-emerald-600",
     },
     {
-      id: "13",
+      id: "12",
       fullName: "Arjun Zadee",
       name: "Arjun",
       profile: Arjun,
@@ -348,7 +337,7 @@ const OurTeam = () => {
       bgColor: "bg-amber-600",
     },
     {
-      id: "14",
+      id: "13",
       fullName: "Chetana Bangar",
       name: "Chetana",
       profile: Chetana,
@@ -359,7 +348,7 @@ const OurTeam = () => {
       bgColor: "bg-lime-600",
     },
     {
-      id: "15",
+      id: "14",
       fullName: "Nikita Sangle",
       name: "Nikita",
       profile: Nikita,
@@ -370,7 +359,7 @@ const OurTeam = () => {
       bgColor: "bg-indigo-600",
     },
     {
-      id: "16",
+      id: "15",
       fullName: "Sakshi Jadhav",
       name: "Sakshi",
       profile: Sakshi,
@@ -379,6 +368,17 @@ const OurTeam = () => {
       thought:
         "we help you to unleash the power within your businesswe help you to unleash the power within your business",
       bgColor: "bg-fuchsia-600",
+    },
+    {
+      id: "16",
+      fullName: "Tarun Jain",
+      name: "Tarun",
+      profile: Tarun,
+      bigprofile: bigprofiletarun,
+      roll: "Chief Marketing executive",
+      thought:
+        "we help you to unleash the power within your businesswe help you to unleash the power within your business",
+      bgColor: "bg-red-600",
     },
   ]
 
