@@ -117,7 +117,7 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
               <div 
                 className="lg:w-1/2 rounded-lg xl:p-7 md:p-4"
                 style={{ backgroundColor: cardColors[index % cardColors.length] }}
-              >
+                  >
                 <div className="xl:py-20 mb:py-2">
                   <div className="mb-4">
                     <img src={item.icon} className="w-10 h-10 ml-4" alt="" />
