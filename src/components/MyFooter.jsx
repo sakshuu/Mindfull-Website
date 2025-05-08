@@ -206,8 +206,8 @@ const MyFooter = () => {
                 </div>
               </div>
                   <p className="text-xs text-white/80 m">
-                    Shreedeep-C, 1st Floor, Unit No.1, <br />
-                    Sector-Yashoda Chowk, Pimpri Sangavi, Pune 411027
+                  Ganeesham-D, 1st Floor, Unit No. 1,  <br />
+Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
                   </p>
             {/* </div> */}
 

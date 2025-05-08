@@ -35,3 +35,21 @@ export { default as bigprofilesonali } from "./bigprofilesonali.png";
 export { default as bigprofilesudipto } from "./bigprofilesudipto.png";
 export { default as bigprofilesuhas } from "./bigprofilesuhas.png";
 export { default as bigprofiletarun } from "./bigprofiletarun.png";
+
+export { default as purplesagar } from "./purplesagar.png";
+export { default as purpleabhi } from "./purpleabhi.png";
+export { default as purplemanish } from "./purplemanish.png";
+export { default as bluesanket } from "./bluesanket.png";
+export { default as darkblueshantanu } from "./darkblueshantanu.png";
+export { default as darkbluejanhavi } from "./darkbluejanhavi.png";
+export { default as darkbluesuhas } from "./darkbluesuhas.png";
+export { default as bluesudipto } from "./bluesudipto.png";
+export { default as bluesonali } from "./bluesonali.png";
+export { default as bluegauri } from "./bluegauri.png";
+export { default as bluerohit } from "./bluerohit.png";
+export { default as darkbluearjun } from "./darkbluearjun.png";
+export { default as bluechetana } from "./bluechetana.png";
+export { default as bluenikita } from "./bluenikita.png";
+export { default as pinksakshi } from "./pinksakshi.png";
+export { default as darkbluetarun } from "./darkbluetarun.png";
+

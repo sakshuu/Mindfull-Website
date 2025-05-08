@@ -160,8 +160,7 @@ const ContactusFooter = () => {
                 </a>
               </div>
 
-              <a
-                href="mailto:marketing@mindfull.co.in"
+              <a  href="mailto:marketing@mindfull.co.in"
                 className=" py-2 px-8 mt-3 rounded flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
               >
                 <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>
