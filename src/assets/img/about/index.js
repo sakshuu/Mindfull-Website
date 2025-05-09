@@ -17,6 +17,7 @@ export { default as Chetana } from "./Chetana.png";
 export { default as Nikita } from "./Nikita.png";
 export { default as Manish } from "./Manish.png";
 export { default as Sakshi } from "./Sakshi.png";
+export { default as sagarganathe } from "./sagarganathe.png";
 export { default as culture } from "./culture.png";
 export { default as bigprofilesagar } from "./bigprofilesagar.png";
 export { default as bigprofileabhi } from "./bigprofileabhi.png";
