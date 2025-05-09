@@ -41,7 +41,7 @@ import {
   purplemanish,
   purplesagar,
   Rohit,
-  Sagar,
+  sagar,
   Sakshi,
   Sanket,
   Shantanu,
@@ -59,7 +59,7 @@ const OurTeam = () => {
       fullName: "Sagar Ghanate",
       name: "Sagar",
       colorprofile: purplesagar,
-      profile: Sagar,
+      profile: sagar,
       bigprofile: bigprofilesagar,
       roll: "Director",
       thought:
