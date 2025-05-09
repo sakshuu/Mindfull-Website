@@ -155,10 +155,10 @@ const imagesicons = [
                 ></div>
                 <div className='text-7xl font-bold'>{currWord}</div>
               </div>
-              <p className='mt-4 font-thin w-[90%]'>
+              <p className='mt-4 font-extralight text-gray-200 text-lg w-[90%]' style={{fontFamily:'Spartan'}} >
                 From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
               </p>
-              <button  className="bg-transparent mt-4 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
+              <button  className="bg-transparent mt-4 hover:bg-blue-500 text-white  hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-xl" style={{fontFamily:'Sora'}}>
                 Get Started
               </button>
             </div>
@@ -185,7 +185,7 @@ const imagesicons = [
       </div>
 
     <div style={{padding:'40px 50px 0px 50px'}}>
-      <p className='text-2xl text-gray-400 font-thin py-3 ml-14'>We Believe</p>
+      <p className='text-2xl text-gray-400 font-thin py-3 ml-14' style={{fontFamily:'Spartan'}}>We Believe</p>
 <div className='text-5xl text-center ' >Great brands <span className='lightpink font-semibold'>aren’t just seen;</span>  they are <span className='lightblue font-semibold'>felt, experienced, and remembered.</span>  At Mindfull, we blend <span className='purplle font-semibold'>creativity with strategy</span>  to build identities that leave a lasting impact.</div>
     </div>
 
@@ -224,7 +224,6 @@ const imagesicons = [
                         </div>
                     </div>
                 </div> */}
-                   <div className='title-home'>Our Work</div>
             <div className="relative w-full">
                 <div
                     ref={desktopContainerRef}
@@ -249,8 +248,8 @@ const imagesicons = [
             </div>
 
 {/*Industries  */}
-<div className='title-home mb-3 '>Industries we serve</div>
-      <img src={Industries} alt="" style={{width:'100%'}} />
+<div className='title-home my-4' style={{fontFamily:'Spartan'}}>Industries we serve</div>
+      <img src={Industries}className='pb-10'  alt="" style={{width:'100%'}} />
       </div>
     </>
   );

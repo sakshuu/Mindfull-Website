@@ -58,7 +58,7 @@ const Navigationbar = () => {
           Careers
         </NavLink>
 <NavLink to="/contactus">
-        <button class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
+        <button class="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-xl">
   Get Started
 </button>
 </NavLink>

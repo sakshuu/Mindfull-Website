@@ -86,30 +86,33 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
    <div className='mainhero'>
           <div style={{ display: 'flex', width:'70%' , padding:'8%'}}>
             <div>
-              <div className='py-6 text-xl text-gray-400'>Our Service</div>
+              <div className='py-6 text-xl text-gray-400' style={{fontFamily:'Spartan'}}>Our Service</div>
               <div className='text-7xl font-bold'>Helping brands grow, <br /> connect, and thrive</div>
 
-              <p className='main-content mt-4 text-1xl'>
-              At <span>Mindfull</span>, we help brands grow by creating meaningful connections and delivering impactful solutions. Through creativity and strategy, we ensure your brand thrives and stands out in a competitive world.
+              <p className='main-content mt-4 text-1xl' style={{fontFamily:'Spartan'}}>
+              At <span style={{fontFamily:'Spartan'}}>Mindfull</span>, we help brands grow by creating meaningful connections and delivering impactful solutions. Through creativity and strategy, we ensure your brand thrives and stands out in a competitive world.
                </p>
-               <button  className="bg-transparent mt-7 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
+               {/* <button  className="bg-transparent mt-7 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
+                Get Started
+              </button> */}
+                            <button  className="bg-transparent mt-4 hover:bg-blue-500 text-white  hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-xl" style={{fontFamily:'Sora'}}>
                 Get Started
               </button>
             </div>
           </div>
               </div>
               <div className='pl-32 mb-10 mt-10'>
-<div className='text-xl text-gray-500 mb-1'>Our Work</div>
-      <div className='text-lg text-gray-300  max-w-2xl'>
+<div className='text-xl text-gray-500 mb-1' style={{fontFamily:'Spartan'}}>Our Work</div>
+      <div className='text-lg text-gray-300  max-w-2xl' style={{fontFamily:'Spartan'}}>
       Our services have a proven track <br /> record of boosting businesses
       </div>
 </div>
 
 <AlternatingCards ourWorks={ourWorks} />
 
-<div className='pl-32'>
-        <div className=' text-xl text-gray-400'>Our Industries</div>
-        <div className='text-xl '>We don't just know industries—we understand <br />
+<div className='pl-32 mt-10'>
+        <div className=' text-xl text-gray-400' style={{fontFamily:'Spartan'}}>Our Industries</div>
+        <div className='text-xl ' style={{fontFamily:'Spartan'}}>We don't just know industries—we understand <br />
                                             how to make brands thrive within them.
 </div>
 </div>

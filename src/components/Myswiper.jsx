@@ -74,7 +74,7 @@ const swiperimages = [
  </div>
  </div> */}
  <div className="swiper-slide-home">
-            <div className='title-home ml-24'>Our Services</div>
+            <div className='title-home ml-24' style={{fontFamily:'Spartan'}}>Our Services</div>
             
             <div className="container-sm">
                 <div className="swiper-button-prev">
@@ -90,6 +90,7 @@ const swiperimages = [
                     centeredSlides={true}
                     slidesPerView={'auto'}
                     initialSlide={2}
+                    spaceBetween={40}
                     coverflowEffect={{
                         rotate: 2,
                         stretch: 0,

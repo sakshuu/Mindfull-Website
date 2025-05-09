@@ -3,6 +3,60 @@ import { call, facebook, insta, linkdin,  mail, mail2, massage, mindfulllogo, wp
 import { NavLink } from 'react-router-dom'
 
 const ContactusFooter = () => {
+  const [showCopied, setShowCopied] = useState(false);
+  const phoneNumber = '+917980009725';
+  const displayNumber = '+917980009725';
+
+
+  const handleEmailClick = () => {
+    // First try standard mailto approach
+    window.location.href = 'mailto:marketing@mindfull.co.in';
+    
+    // Fallback for mobile devices or special cases
+    setTimeout(() => {
+      if (!document.hidden) {
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=marketing@mindfull.co.in', '_blank');
+      }
+    }, 100);
+  };
+
+  const handleWhatsAppClick = () => {
+    // First try opening WhatsApp directly
+    window.open('https://wa.me/7980009725');
+    
+    // Fallback for devices that might block popups
+    setTimeout(() => {
+      if (!document.hidden) {
+        window.location.href = 'https://web.whatsapp.com/send?phone=7980009725';
+      }
+    }, 100);
+  };
+ 
+  const handlePhoneClick = (e) => {
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // On mobile - open dialer immediately
+      window.location.href = `tel:${phoneNumber}`;
+    } else {
+      // On desktop - copy to clipboard
+      e.preventDefault();
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        setShowCopied(true);
+        setTimeout(() => setShowCopied(false), 100);
+      }).catch(() => {
+        // Fallback for browsers without clipboard API
+        const textArea = document.createElement('textarea');
+        textArea.value = phoneNumber;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        setShowCopied(true);
+        setTimeout(() => setShowCopied(false), 200);
+      });
+    }
+  };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -137,36 +191,53 @@ const ContactusFooter = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="">
-              <div className="flex items-center space-x-2 ">
-                <div className="w-4 h-4 rounded-full bg-white"></div>
-                <span className='text-xl'>Business / Sales Enquiry</span>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                <a
-                  href="#"
-                  className="  py-2 px-8 rounded flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
-                >
-                  <span className="w-5 h-5 flex items-center justify-center"><img src={wp} alt="" /></span>
-                  <span className='text-black'>Chat With Us</span>
-                </a>
-                <a
-                  href="tel:7980009725"
-                  className=" py-2 px-8 rounded flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
-                >
-                  <span className="w-5 h-5 flex items-center justify-center"><img src={call} alt="" /></span>
-                  <span className='text-black'>+917980009725</span>
-                </a>
-              </div>
-
-              <a  href="mailto:marketing@mindfull.co.in"
-                className=" py-2 px-8 mt-3 rounded flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
-              >
-                <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>
-                <span className='text-black'>marketing@mindfull.co.in</span>
-              </a>
+          <div >
+            <div className="flex items-center space-x-2">
+              <div className="w-4 h-4 rounded-full bg-white"></div>
+              <span className='text-xl'>Business / Sales Enquiry</span>
             </div>
+<div className="xl:w-[74%] md:w-[90%] ">
+
+
+            <div className="flex flex-col md:flex-col justify-between xl:flex-row gap-4 mt-4">
+              <a
+                  target="_blank" rel="noreferrer"    onClick={handleWhatsAppClick}
+                className="py-2 px-8 rounded flex items-center justify-center space-x-2 cursor-pointer" 
+                style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+              >
+                <span className="w-5 h-5 flex items-center justify-center"><img src={wp} alt="" /></span>
+                <span className='text-black'>Chat With Us</span>
+              </a>
+              <div className="relative">
+        <a
+          href={`tel:${phoneNumber}`}
+          onClick={handlePhoneClick} target="_blank" rel="noreferrer"
+          className="py-2 px-8 rounded flex items-center justify-center space-x-2 bg-blue-100"
+        >
+          <img src={call} alt="Call" className="w-5 h-5" />
+          <span className="text-black">{displayNumber}</span>
+        </a>
+        {showCopied && (
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs w-36 p-2 rounded">
+            Copied to clipboard!
+          </div>
+        )}
+      </div>
+
+            
+
+            </div>
+
+            <a onClick={handleEmailClick} 
+              href="mailto:marketing@mindfull.co.in"
+              className="py-2 px-2 mt-3 w-auto rounded flex items-center justify-center space-x-2" 
+              style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+            >
+              <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>
+              <span className='text-black text-center'>marketing@mindfull.co.in</span>
+            </a>
+            </div>
+          </div>
         </div>
 
         {/* Copyright */}

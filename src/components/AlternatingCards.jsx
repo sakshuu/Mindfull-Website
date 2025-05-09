@@ -20,8 +20,8 @@ const AlternatingCards = ({ourWorks}) => {
                     <div className="mb-4"> 
                       <img src={item.icon || "/placeholder.svg"} className="w-10 h-10 ml-4" alt="" />
                     </div>
-                    <h2 className="xl:text-2xl md:text-xl md:mb-4 font-bold text-black xl:mt-8">{item.title}</h2>
-                    <p className="xl:text-lg md:text-sm text-black leading-relaxed xl:mt-8">{item.desc}</p>
+                    <h2 className="xl:text-2xl md:text-xl md:mb-4 font-bold text-black xl:mt-8" style={{fontFamily:'Spartan'}}>{item.title}</h2>
+                    <p className="xl:text-lg md:text-sm text-black leading-relaxed xl:mt-8" style={{fontFamily:'Spartan'}}>{item.desc}</p>
                   </div>
                 </div>
 

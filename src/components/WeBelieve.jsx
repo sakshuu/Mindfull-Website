@@ -50,14 +50,14 @@ const WeBelieve = () => {
             desc:'To build brand experiences that are thoughtful, bold, and truly impactful.'
         },
         {
+          src:  vision,
+          title:  'Vision',
+          desc:'We don’t settle. We experiment, evolve, and explore new possibilities.'
+        },
+        {
             src:  values,
             title:  'Values',
             desc:'To lead a mindful revolution in branding, design, and digital storytelling.'
-        },
-        {
-            src:  vision,
-            title:  'Vision',
-            desc:'We don’t settle. We experiment, evolve, and explore new possibilities.'
         },
       ]
       const [visiblePoints, setVisiblePoints] = useState(0);
@@ -81,8 +81,8 @@ const WeBelieve = () => {
    <div className='p-4 md:p-10 lg:p-20'>
 <div className='ml-14'>
 
-<div className='text-lg md:text-xl text-gray-500 mb-1'>We Believe</div>
-<div className='text-base md:text-lg text-gray-300 mb-6 max-w-2xl'>
+<div className='text-lg md:text-xl text-gray-500 mb-1' style={{fontFamily:'Spartan'}}>We Believe</div>
+<div className='text-base md:text-lg text-gray-300 mb-6 max-w-2xl' style={{fontFamily:'Spartan'}}>
   Growth you can see, impact you can  <br className='hidden sm:block' />  measure, success you can believe in.
 </div>
 {/* </div> */}
@@ -138,7 +138,7 @@ const WeBelieve = () => {
               ></div>
             )}
             <div
-              style={{
+              style={{  fontFamily:'Spartan',
                 ...styles.timelineContent,
                 ...(index <= visiblePoints ? styles.timelineContentVisible : {}),
               }}
@@ -152,7 +152,7 @@ const WeBelieve = () => {
 </div> 
 </div> 
     
-    <div className="flex flex-wrap justify-between p-10 md:p-20  min-h-screen">
+    {/* <div className="flex flex-wrap justify-between p-10 md:p-20  min-h-screen">
       {aboutImag.map((item) => (
         <div key={item.id} className="w-full md:w-1/3 px-5 mb-8 md:mb-0 relative">
           <div className="relative">
@@ -165,8 +165,26 @@ const WeBelieve = () => {
             />
 
             <div className="absolute md:bottom-[12%] xl:bottom-[20%] left-0 right-0 text-center md:px-6 xl:px-20 ">
-              <h3 className="text-white md:text-xl xl:text-3xl mb-6">{item.title}</h3>
-              <p className="text-gray-300 md:text-lg xl:tetx-1xl">{item.desc}</p>
+              <h3 className="text-white md:text-xl xl:text-3xl mb-6" style={{fontFamily:'Spartan'}}>{item.title}</h3>
+              <p className="text-gray-300 md:text-lg xl:tetx-1xl" style={{fontFamily:'Spartan'}}>{item.desc}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div> */}
+    <div className="flex flex-wrap justify-between p-4 md:p-20 bg-[#0a0a2e] min-h-screen">
+      {aboutImag.map((item) => (
+        <div key={item.id} className="w-full md:w-1/3 px-2 mb-8 md:mb-0 relative">
+          <div className="relative">
+            <img
+              src={item.src|| "/placeholder.svg"}
+              alt={item.title}
+              width={400}
+              height={600}
+              className="w-full h-auto" />
+            <div className="absolute md:bottom-[10%] xl:bottom-[20%] left-0 right-0 text-center md:px-6 xl:px-20 ">
+              <h3 className="text-white md:text-xl xl:text-3xl mb-6" style={{fontFamily:'Spartan'}}>{item.title}</h3>
+              <p className="text-gray-300 md:text-lg xl:tetx-1xl" style={{fontFamily:'Spartan'}}>{item.desc}</p>
             </div>
           </div>
         </div>

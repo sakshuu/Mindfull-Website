@@ -416,19 +416,15 @@ const Contactus = () => {
       <div className='mainhero'>
         <div style={{ display: 'flex', width:'60%' , padding:'8%'}}>
           <div>
-            <div className=' text-xl text-gray-400'>Join Us</div>
+            <div className=' text-xl text-gray-400' style={{fontFamily:'Spartan'}}>Join Us</div>
             <div className='text-7xl font-bold'>Contact us</div>
-            <p className='main-content mt-4 text-1xl'>
+            <p className='main-content mt-4 text-1xl' style={{fontFamily:'Spartan'}}>
               We’d love to hear from you! Whether you have a question or want to discuss how we can collaborate, our team is here to help. Reach out today, and let’s start building something great together!
             </p>
           </div>
         </div>
       </div>
-      {/* <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7002495215734!2d73.87624!3d18.497232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb01c710d98309%3A0x2b9c011d3f3844a9!2sMindful%20Being!5e0!3m2!1sen!2sin!4v1746273230912!5m2!1sen!2sin" 
-        style={{width:'99vw', height:'70vh', border:'0px'}} 
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe> */}
+     
       <iframe 
       src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3781.487675346857!2d73.80180917519351!3d18.597122382511362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDM1JzQ5LjYiTiA3M8KwNDgnMTUuOCJF!5e0!3m2!1sen!2sin!4v1746771024448!5m2!1sen!2sin"         style={{width:'99vw', height:'70vh', border:'0px'}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -436,25 +432,25 @@ const Contactus = () => {
           <div className="flex flex-col lg:flex-row gap-10">  
             <div className="lg:w-1/2">
               <div className="mb-12">
-                <h2 className="text-4xl text-gray-300 mb-1">Contact Us,</h2>
-                <p className="text-5xl text-white mb-10">Let's Build your <br /> Digital Legacy.</p>
-                <p className="text-lg max-w-lg text-gray-600">
-                  At <span className='text-white'>Mindfull,</span> we design with purpose blending creativity and strategy to craft brand identities that resonate.
+                <h2 className="text-4xl text-gray-300 mb-1" style={{fontFamily:'Spartan'}}>Contact Us,</h2>
+                <p className="text-5xl text-white mb-10" style={{fontFamily:'Spartan'}}>Let's Build your <br /> Digital Legacy.</p>
+                <p className="text-lg max-w-lg text-gray-600" style={{fontFamily:'Spartan'}}>
+                  At <span className='text-white' style={{fontFamily:'Spartan'}}>Mindfull,</span> we design with purpose blending creativity and strategy to craft brand identities that resonate.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 content-start items-start">
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <h3 className="text-sm text-white">Call Center</h3>
+                    <h3 className="text-sm text-white" style={{fontFamily:'Spartan'}}>Call Center</h3>
                   </div>
-                  <p className="text-gray-400 text-sm">+917980009725</p>
-                  <span className="text-gray-400 text-sm">+918888866365</span>
+                  <p className="text-gray-400 text-sm" style={{fontFamily:'Spartan'}}>+917980009725</p>
+                  <span className="text-gray-400 text-sm" style={{fontFamily:'Spartan'}}>+918888866365</span>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <h3 className="text-sm text-white">Our Location</h3>
+                    <h3 className="text-sm text-white" style={{fontFamily:'Spartan'}}>Our Location</h3>
                   </div>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-400 text-sm" style={{fontFamily:'Spartan'}}>
                     Ganesham-D. 1st Floor, Unit No. 1,<br />
                     Govind-Yashada Chowk. Pimple<br />
                     Saudagar, Pune 411027
@@ -462,13 +458,13 @@ const Contactus = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <h3 className="text-sm text-white">Email</h3>
+                    <h3 className="text-sm text-white" style={{fontFamily:'Spartan'}}>Email</h3>
                   </div>
-                  <p className="text-gray-400 text-sm">marketing@mindfull.co.in</p>
+                  <p className="text-gray-400 text-sm" style={{fontFamily:'Spartan'}}>marketing@mindfull.co.in</p>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center">
-                    <h3 className="text-sm text-white">Social Network</h3>
+                    <h3 className="text-sm text-white" style={{fontFamily:'Spartan'}}>Social Network</h3>
                   </div>
                   <div className="flex space-x-4">
                     <a href="https://www.linkedin.com/company/mindfull-creative-studio/">
@@ -563,14 +559,14 @@ const Contactus = () => {
       <div className="mb-20 bg-black text-white p-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-12">
-            <h1 className="text-3xl font-light">
-              <span className="text-gray-500">Frequently</span> Asked Questions
+            <h1 className="text-3xl font-light" style={{fontFamily:'Spartan'}}>
+              <span className="text-gray-500" style={{fontFamily:'Spartan'}}>Frequently</span> Asked Questions
             </h1>
-            <div className="relative">
+            <div className="relative w-[48%]">
               <input
                 type="text"
                 placeholder="Search"
-                className="bg-zinc-900 rounded-full py-2 pl-10 pr-4 w-80 text-sm focus:outline-none"
+                className="bg-zinc-900  rounded-full py-2 pl-10 pr-4 w-[100%] text-sm focus:outline-none"
               />
               <img src={searchbar} alt="" className="absolute left-3 top-2.5 w-4" />
             </div>
@@ -687,7 +683,6 @@ const Contactus = () => {
           </div> */}
 
 <div className="max-w-6xl mx-auto px-4 py-12 mb-10">
-      <h1 className="text-3xl font-bold mb-8">Frequently Asked Questions</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* FAQ Items - Left Column */}
@@ -702,7 +697,7 @@ const Contactus = () => {
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-base font-light pr-4">{faq.question}</h3>
+                <h3 className="text-base font-light pr-4" style={{fontFamily:'Spartan'}}>{faq.question}</h3>
                 <button
                   className={`rounded-full p-2 flex items-center justify-center ${faq.isOpen ? "bg-blue-100" : "bg-gray-900"}`}
                 >
@@ -710,7 +705,7 @@ const Contactus = () => {
                 </button>
               </div>
               {faq.isOpen && (
-                <p className="mt-4  font-light text-gray-200">{faq.answer}</p>
+                <p className="mt-4  font-light text-gray-200" style={{fontFamily:'Spartan'}}>{faq.answer}</p>
               )}
             </div>
           ))}
@@ -728,7 +723,7 @@ const Contactus = () => {
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleFAQ(index + 3)}
               >
-                <h3 className="text-base font-light pr-4">{faq.question}</h3>
+                <h3 className="text-base font-light pr-4" style={{fontFamily:'Spartan'}}>{faq.question}</h3>
                 <button
                   className={`rounded-full p-2 flex items-center justify-center ${faq.isOpen ? "bg-blue-100" : "bg-gray-900"}`}
                 >
@@ -736,7 +731,7 @@ const Contactus = () => {
                 </button>
               </div>
               {faq.isOpen && (
-                <p className="mt-4 font-light text-gray-200">{faq.answer}</p>
+                <p className="mt-4 font-light text-gray-200" style={{fontFamily:'Spartan'}}>{faq.answer}</p>
               )}
             </div>
           ))}
