@@ -3,7 +3,6 @@ export { default as  values  } from "./values.png";
 export { default as  vision  } from "./vision.png";
 export { default as  whymindfullimg } from "./whymindfullimg.png";
 export { default as Abhi } from "./Abhi.png";
-export { default as sagar } from "./sagar.png";
 export { default as Tarun } from "./Tarun.png";
 export { default as Sanket } from "./Sanket.png";
 export { default as Shantanu } from "./Shantanu.png";
