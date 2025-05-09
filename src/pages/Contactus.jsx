@@ -684,7 +684,7 @@ const Contactus = () => {
             ))}
           </div> */}
 
-<div className="max-w-6xl mx-auto px-4 py-12">
+<div className="max-w-6xl mx-auto px-4 py-12 mb-10">
       <h1 className="text-3xl font-bold mb-8">Frequently Asked Questions</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -700,15 +700,15 @@ const Contactus = () => {
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-lg font-medium pr-4">{faq.question}</h3>
+                <h3 className="text-base font-light pr-4">{faq.question}</h3>
                 <button
-                  className={`rounded-full p-2 flex items-center justify-center ${faq.isOpen ? "bg-blue-100" : "bg-gray-100"}`}
+                  className={`rounded-full p-2 flex items-center justify-center ${faq.isOpen ? "bg-blue-100" : "bg-gray-900"}`}
                 >
                   {faq.isOpen ? <img src={minus} className="w-4" /> : <img src={plus} className="w-4" />}
                 </button>
               </div>
               {faq.isOpen && (
-                <p className="mt-4 text-gray-300">{faq.answer}</p>
+                <p className="mt-4  font-light text-gray-200">{faq.answer}</p>
               )}
             </div>
           ))}
@@ -726,15 +726,15 @@ const Contactus = () => {
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleFAQ(index + 3)}
               >
-                <h3 className="text-lg font-medium pr-4">{faq.question}</h3>
+                <h3 className="text-base font-light pr-4">{faq.question}</h3>
                 <button
-                  className={`rounded-full p-2 flex items-center justify-center ${faq.isOpen ? "bg-blue-100" : "bg-gray-100"}`}
+                  className={`rounded-full p-2 flex items-center justify-center ${faq.isOpen ? "bg-blue-100" : "bg-gray-900"}`}
                 >
                   {faq.isOpen ? <img src={minus} className="w-4" /> : <img src={plus} className="w-4" />}
                 </button>
               </div>
               {faq.isOpen && (
-                <p className="mt-4 text-gray-300">{faq.answer}</p>
+                <p className="mt-4 font-light text-gray-200">{faq.answer}</p>
               )}
             </div>
           ))}
