@@ -74,7 +74,7 @@ const swiperimages = [
  </div>
  </div> */}
  <div className="swiper-slide-home">
-            <div className='title-home ml-48'>Our Services</div>
+            <div className='title-home ml-24'>Our Services</div>
             
             <div className="container-sm">
                 <div className="swiper-button-prev">

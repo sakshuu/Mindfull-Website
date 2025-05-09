@@ -146,7 +146,7 @@ const imagesicons = [
     <>
       <div className='mainhero'>
         <div className='hero-sub-content'>
-        <div style={{ display: 'flex',}} className='md:col-span-2 ml-32'>
+        <div  className=' col-span-3 ml-32'>
             <div>
               <div className='text-7xl font-bold md:ml-9 sm:mt-40'>We</div>
               <div className='flex gap-2 items-center'>
@@ -155,7 +155,7 @@ const imagesicons = [
                 ></div>
                 <div className='text-7xl font-bold'>{currWord}</div>
               </div>
-              <p className='main-content mt-4 w-96'>
+              <p className='mt-4 font-thin w-[90%]'>
                 From concept to execution, we craft experiences that captivate, communicate, and convert. Blending strategy, creativity, and innovation to build brands that leave a lasting impact.
               </p>
               <button  className="bg-transparent mt-4 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded-md">
@@ -163,8 +163,8 @@ const imagesicons = [
               </button>
             </div>
           </div>
-          {/* <div className='col-span-3'>
-            <iframe 
+ <div className='col-span-5'>
+                    {/*  <iframe 
               width="670" 
               height="415" 
               src="https://www.youtube.com/embed/9VsEAEX6C9Q?si=ZBXkMK7Cmpv-qCJz" 
@@ -173,16 +173,20 @@ const imagesicons = [
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               referrerPolicy="strict-origin-when-cross-origin" 
               allowFullScreen
-            ></iframe>
-          </div> */}
+            ></iframe> */}
+          </div> 
         </div>
       </div>
 
+      <div className="ticker-container-text">
+        <div className="ticker-content">
+          <div  className="ticker-item"> <span className='lightpink'>150+</span> Happy Customers || <span className='purplle'>12+</span>  Years of Experience || <span className='blue'>15+</span>  Team Members || <span className='lightblue'>200+</span>  Project Completed</div>
+        </div>
+      </div>
 
-
-    <div style={{padding:'40px 10px 0px 60px'}}>
-      <p className='text-xl'>We Believe</p>
-<div className='text-5xl text-center' >Great brands <span className='lightpink font-semibold'>aren’t just seen;</span>  they are <span className='lightblue font-semibold'>felt, experienced, and remembered.</span>  At Mindfull, we blend <span className='purplle font-semibold'>creativity with strategy</span>  to build identities that leave a lasting impact.</div>
+    <div style={{padding:'40px 50px 0px 50px'}}>
+      <p className='text-2xl text-gray-400 font-thin py-3 ml-14'>We Believe</p>
+<div className='text-5xl text-center ' >Great brands <span className='lightpink font-semibold'>aren’t just seen;</span>  they are <span className='lightblue font-semibold'>felt, experienced, and remembered.</span>  At Mindfull, we blend <span className='purplle font-semibold'>creativity with strategy</span>  to build identities that leave a lasting impact.</div>
     </div>
 
 {/* swiper */}
@@ -203,11 +207,7 @@ const imagesicons = [
           ))}
         </div>
       </div>
-<div className="ticker-container-text">
-        <div className="ticker-content">
-          <div  className="ticker-item"> <span className='lightpink'>150+</span> Happy Customers || <span className='purplle'>12+</span>  Years of Experience || <span className='blue'>15+</span>  Team Members || <span className='lightblue'>200+</span>  Project Completed</div>
-        </div>
-      </div>
+
 {/* 
                 <div className="relative">
                     <div
@@ -224,7 +224,7 @@ const imagesicons = [
                         </div>
                     </div>
                 </div> */}
-                   <div className='text-lg md:text-xl text-gray-500 mb-3 px-6 md:px-14 lg:px-28'>Our Work</div>
+                   <div className='title-home'>Our Work</div>
             <div className="relative w-full">
                 <div
                     ref={desktopContainerRef}
@@ -249,7 +249,7 @@ const imagesicons = [
             </div>
 
 {/*Industries  */}
-<div className='title-home mb-3 ml-32'>Industries we serve</div>
+<div className='title-home mb-3 '>Industries we serve</div>
       <img src={Industries} alt="" style={{width:'100%'}} />
       </div>
     </>

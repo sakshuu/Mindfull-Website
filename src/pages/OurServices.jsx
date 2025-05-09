@@ -107,10 +107,6 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
 
 <AlternatingCards ourWorks={ourWorks} />
 
-
-
-
-
 <div className='pl-32'>
         <div className=' text-xl text-gray-400'>Our Industries</div>
         <div className='text-xl '>We don't just know industries—we understand <br />

@@ -28,11 +28,12 @@
    }
    .hero-sub-content{
      height: 90vh;    
-     @apply grid grid-cols-5 gap-4 ;
+     width: 100%;
+     @apply grid grid-cols-8 gap-4 ;
      position: absolute;
    }
    .title-home {
-    @apply text-2xl text-gray-400 pt-10 ;
+    @apply text-2xl text-gray-400 font-thin py-3 ml-24 ;
   }
 
   .scrollbar-hide::-webkit-scrollbar {
