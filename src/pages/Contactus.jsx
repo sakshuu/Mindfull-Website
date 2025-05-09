@@ -424,11 +424,13 @@ const Contactus = () => {
           </div>
         </div>
       </div>
-      <iframe 
+      {/* <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7002495215734!2d73.87624!3d18.497232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb01c710d98309%3A0x2b9c011d3f3844a9!2sMindful%20Being!5e0!3m2!1sen!2sin!4v1746273230912!5m2!1sen!2sin" 
         style={{width:'99vw', height:'70vh', border:'0px'}} 
         referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      ></iframe> */}
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3781.487675346857!2d73.80180917519351!3d18.597122382511362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDM1JzQ5LjYiTiA3M8KwNDgnMTUuOCJF!5e0!3m2!1sen!2sin!4v1746771024448!5m2!1sen!2sin"         style={{width:'99vw', height:'70vh', border:'0px'}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-10">  
