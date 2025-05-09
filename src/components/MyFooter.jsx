@@ -164,10 +164,10 @@ const MyFooter = () => {
                 <span className='text-xl'>Business / Sales Enquiry</span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              <div className="flex flex-col flex-wrap lg:flex-row gap-4 mt-4">
                 <a  onClick={handleWhatsAppClick}
                   href="#" target="_blank" rel="noreferrer"
-                  className="  py-2 px-8 rounded flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+                  className="  py-2 px-8 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
                 >
                   <span className="w-5 h-5 flex items-center justify-center"><img src={wp} alt="" /></span>
                   <span className='text-black'>Chat With Us</span>
@@ -175,7 +175,7 @@ const MyFooter = () => {
                 <div className=' relative'>
                 <a onClick={handlePhoneClick}
                  href={`tel:${phoneNumber}`}  target="_blank" rel="noreferrer"
-                 className=" py-2 px-8 rounded flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+                 className=" py-2 px-8 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
                  >
                   <span className="w-5 h-5 flex items-center justify-center"><img src={call} alt="" /></span>
                   <span className='text-black'>{displayNumber}</span>
@@ -190,7 +190,7 @@ const MyFooter = () => {
 
               <a
                 href="mailto:marketing@mindfull.co.in" onClick={handleEmailClick}
-                className=" py-2 px-8 mt-3 rounded flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+                className=" py-2 px-8 mt-3 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
               >
                 <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>
                 <span className='text-black'>marketing@mindfull.co.in</span>
@@ -236,8 +236,8 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
 
             <div className=" bg-white p-7 rounded-md">
             {/* <div className=""> */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get In Touch</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-normal text-blue-800 mb-2" style={{fontFamily:'Spartan'}}>Get In Touch</h3>
+              <p className="text-gray-600" style={{fontFamily:'Spartan'}}>
                 We help you to unleash the power within your business
               </p>
 
@@ -257,6 +257,7 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  style={{fontFamily:'Albert Sans'}}
                   className="mt-3 text-black block w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
                 />
               </div>
@@ -270,6 +271,7 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  style={{fontFamily:'Albert Sans'}}
                   className="mt-3 block text-black w-full border-b border-gray-900 py-1 focus:outline-none focus:border-gray-500"
                 />
               </div>
@@ -278,6 +280,8 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
                 <input
                   type="text"
                   id="subject"
+                  required
+                  style={{fontFamily:'Albert Sans'}}
                   name="subject"
                   placeholder="Subject"
                   value={formData.subject}
@@ -295,6 +299,7 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  style={{fontFamily:'Albert Sans'}}
                   className="mt-3 mb-4 block w-full border-b text-black border-gray-900 py-1 focus:outline-none focus:border-gray-500"
                 ></textarea>
               </div>
@@ -303,7 +308,7 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
                 type="submit"
                 disabled={isSubmitting}
                 style={{ backgroundColor: '#11526B' }}
-                className="text-white px-20 py-3 rounded-md transition-colors disabled:opacity-50"
+                className="text-white px-20 py-3 rounded-xl transition-colors disabled:opacity-50"
               >
                 {isSubmitting ? 'Sending...' : 'Submit'}
               </button>

@@ -199,10 +199,10 @@ const ContactusFooter = () => {
 <div className="xl:w-[74%] md:w-[90%] ">
 
 
-            <div className="flex flex-col md:flex-col justify-between xl:flex-row gap-4 mt-4">
+            <div className="flex flex-col flex-wrap md:flex-col justify-between xl:flex-row gap-4 mt-4">
               <a
                   target="_blank" rel="noreferrer"    onClick={handleWhatsAppClick}
-                className="py-2 px-8 rounded flex items-center justify-center space-x-2 cursor-pointer" 
+                className="py-2 px-8 rounded-xl flex items-center justify-center space-x-2 cursor-pointer" 
                 style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
               >
                 <span className="w-5 h-5 flex items-center justify-center"><img src={wp} alt="" /></span>
@@ -212,7 +212,7 @@ const ContactusFooter = () => {
         <a
           href={`tel:${phoneNumber}`}
           onClick={handlePhoneClick} target="_blank" rel="noreferrer"
-          className="py-2 px-8 rounded flex items-center justify-center space-x-2 bg-blue-100"
+          className="py-2 px-8 rounded-xl flex items-center justify-center space-x-2 bg-blue-100"
         >
           <img src={call} alt="Call" className="w-5 h-5" />
           <span className="text-black">{displayNumber}</span>
@@ -230,7 +230,7 @@ const ContactusFooter = () => {
 
             <a onClick={handleEmailClick} 
               href="mailto:marketing@mindfull.co.in"
-              className="py-2 px-2 mt-3 w-auto rounded flex items-center justify-center space-x-2" 
+              className="py-2 px-2 mt-3 w-auto rounded-xl flex items-center justify-center space-x-2" 
               style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
             >
               <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>

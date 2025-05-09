@@ -721,7 +721,7 @@ const OurTeam = () => {
              <div className="w-[50%]  h-full flex flex-col ">
             <h2 className="text-2xl font-semibold pt-10 ml-20 text-left text-gray-400"  style={{fontFamily:'Spartan'}}>Our Team</h2>
 
-            <div className="flex-grow flex text-center flex-col justify-center mb-[32%] items-center">
+            <div className="flex-grow flex text-center flex-col justify-center mb-[39%] items-center">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={selectedMember.id}
@@ -804,7 +804,7 @@ const OurTeam = () => {
                 <img
                   src={selectedMember.bigprofile}
                   alt={selectedMember.fullName}
-                  className="w-[70vw] h-[96vh]  pb-[20%] object-cover rounded-lg"
+                  className="w-[70vw] h-[96vh]  pb-[10%] object-cover rounded-lg mt-2"
                 />
               </motion.div>
             </AnimatePresence>

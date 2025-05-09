@@ -547,7 +547,7 @@ const Contactus = () => {
                   type="submit"
                   disabled={isSubmitting}
                   style={{ backgroundColor: '#11526B' }}
-                  className="text-white px-20 py-3 rounded-md transition-colors disabled:opacity-50"
+                  className="text-white px-20 py-3 rounded-xl transition-colors disabled:opacity-50"
                 >
                   {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>

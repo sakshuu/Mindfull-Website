@@ -1,6 +1,6 @@
 /* Navbar.css */
 .navbar-container {
-  @apply flex flex-wrap items-center justify-between text-white shadow-md relative px-[5%] py-[1%];
+  @apply flex flex-wrap items-center justify-between bg-black text-white shadow-md relative px-[5%] py-[1%];
 }
 
 .navbar-logo .logo-text {
@@ -56,3 +56,4 @@
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
