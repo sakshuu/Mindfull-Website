@@ -105,8 +105,8 @@ const Contactus = () => {
   return (
     <>
       <div className='mainhero'>
-        <div style={{ display: 'flex', width:'60%' , padding:'8%'}}>
-          <div>
+        <div style={{ display: 'flex', width:'60%' , padding:'8%' }}>
+          <div style={{marginTop:'10%'}}>
             <div className=' text-xl text-gray-400' style={{fontFamily:'Spartan'}}>Join Us</div>
             <div className='text-7xl font-bold'>Contact us</div>
             <p className='main-content mt-4 text-1xl' style={{fontFamily:'Spartan'}}>

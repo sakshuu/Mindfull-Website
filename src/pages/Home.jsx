@@ -146,9 +146,9 @@ const imagesicons = [
     <>
       <div className='mainhero'>
         <div className='hero-sub-content'>
-        <div  className=' col-span-3 ml-32'>
+        <div  className=' col-span-4 ml-32'>
             <div>
-              <div className='text-7xl font-bold md:ml-9 sm:mt-40'>We</div>
+              <div className='text-7xl font-bold md:ml-9 mt-[25%]'>We</div>
               <div className='flex gap-2 items-center'>
                 <div 
                   className={`w-6 h-6 rounded-full mt-7 ${currentColorClass}`}
@@ -163,7 +163,7 @@ const imagesicons = [
               </button>
             </div>
           </div>
- <div className='col-span-5'>
+ <div className='col-span-4'>
                     {/*  <iframe 
               width="670" 
               height="415" 

@@ -84,10 +84,10 @@ const [currWord, setCurrWord] = useState(wordArray[0]);
 
   return  <>
    <div className='mainhero'>
-          <div style={{ display: 'flex', width:'70%' , padding:'8%'}}>
-            <div>
+          <div style={{ display: 'flex', width:'70%' , marginLeft:'10%'}}>
+            <div style={{marginTop:'16%'}}>
               <div className='py-6 text-xl text-gray-400' style={{fontFamily:'Spartan'}}>Our Service</div>
-              <div className='text-7xl font-bold'>Helping brands grow, <br /> connect, and thrive</div>
+              <div className='text-6xl font-bold'>Helping brands grow, <br /> connect, and thrive</div>
 
               <p className='main-content mt-4 text-1xl' style={{fontFamily:'Spartan'}}>
               At <span style={{fontFamily:'Spartan'}}>Mindfull</span>, we help brands grow by creating meaningful connections and delivering impactful solutions. Through creativity and strategy, we ensure your brand thrives and stands out in a competitive world.
