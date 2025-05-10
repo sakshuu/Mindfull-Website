@@ -1,70 +1,12 @@
-// import React from 'react'
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import { MyFooter, Navigationbar } from './components';
-// import { About, Contactus, Home, OurServices, Page404 } from './pages';
-
-// const App = () => {
-//   return <>
-// <div style={{backgroundColor:'rgba(1, 1, 1, 1)'}}>
-//   <BrowserRouter>
-//   <Navigationbar/>
-//   <Routes>
-//     <Route path='/' element={<Home/>}></Route>
-//     <Route path='/about' element={<About/>}></Route>
-//     <Route path='/services' element={<OurServices/>}></Route>
-//     <Route path='/contactu' element={<Contactus/>}></Route>
-//     <Route path='*' element={<Page404/>}></Route>
-//   </Routes>
-//   <MyFooter/>
-//   </BrowserRouter>
-// </div>
-//   </>
-// }
-
-// export default App
 
 
-// import React from 'react'
-// import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-// import { MyFooter, Navigationbar } from './components';
-// import { About,  Contactus,  Home, OurServices, Page404 } from './pages';
-
-// const AppContent = () => {
-//   const location = useLocation();
-//   const is404Page = !['/', '/contactus', '/about', '/services'].includes(location.pathname);
-
-//   return (
-//     <div style={{backgroundColor:'rgba(1, 1, 1, 1)'}}>
-//       {!is404Page && <Navigationbar/>}
-//       <Routes>
-//         <Route path='/' element={<Home/>}></Route>
-//         <Route path='/about' element={<About/>}></Route>
-//         <Route path='/services' element={<OurServices/>}></Route>
-//         <Route path='/contactus' element={<Contactus/>}></Route>
-//         <Route path='*' element={<Page404/>}></Route>
-//       </Routes>
-//       {!is404Page && <MyFooter/>}
-//     </div>
-//   );
-// }
-// const App = () => {
-//   return (
-//     <BrowserRouter>
-//       <AppContent />
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
-
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { MyFooter, Navigationbar } from './components';
 import { About, Contactus, Home, OurServices, Page404 } from './pages';
 import { loading } from './assets/videos';
 import ContactusFooter from './components/ContactusFooter';
 
-// Create a simple Loader component (you can customize this)
 const Loader = () => {
   return (
     <div style={{
@@ -79,38 +21,66 @@ const Loader = () => {
       alignItems: 'center',
       zIndex: 9999
     }}>
-      {/* Replace this with your logo or any loading animation */}
       <div className="spinner-border text-primary" role="status">
         <span className="visually-hidden">
-        <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        
-        style={{ width: '100vw',  }}
-      >
-        <source src={loading} type="video/webm" />
-        {/* <source src="/loader.mp4" type="video/mp4" /> */}
-        Your browser does not support the video tag.
-      </video>
+          <video autoPlay loop muted playsInline style={{ width: '100vw' }}>
+            <source src={loading} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
         </span>
       </div>
-      {/* Or use an image logo */}
-      {/* <img src="/path-to-your-logo.png" alt="Loading..." style={{ width: '100px', height: '100px' }} /> */}
     </div>
   );
-}
+};
+
+const ComingSoonMobile = () => {
+  return (
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(1, 1, 1, 1)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 10000,
+      color: 'white',
+      fontSize: '24px',
+      textAlign: 'center',
+      padding: '20px'
+    }}>
+      <h1>Stay Tuned for Our Mobile version view Release</h1>
+    </div>
+  );
+};
 
 const AppContent = () => {
   const location = useLocation();
   const is404Page = !['/', '/contactus', '/about', '/services'].includes(location.pathname);
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); 
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -119,28 +89,26 @@ const AppContent = () => {
     return <Loader />;
   }
 
+  if (isMobile) {
+    return <ComingSoonMobile />;
+  }
+
   return (
-    <div style={{backgroundColor:'rgba(1, 1, 1, 1)'}}>
-      {!is404Page && <Navigationbar/>}
+    <div style={{ backgroundColor: 'rgba(1, 1, 1, 1)' }}>
+      {!is404Page && <Navigationbar />}
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/about' element={<About/>}></Route>
-        <Route path='/services' element={<OurServices/>}></Route>
-        <Route path='/contactus' element={<Contactus/>}></Route>
-        <Route path='*' element={<Page404/>}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<OurServices />} />
+        <Route path="/contactus" element={<Contactus />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
-      {/* {!is404Page && <MyFooter/> && <ContactusFooter/>} */}
-       {/* Updated footer logic */}
-       {!is404Page && (
-        location.pathname === '/contactus' ? (
-          <ContactusFooter />
-        ) : (
-          <MyFooter />
-        )
+      {!is404Page && (
+        location.pathname === '/contactus' ? <ContactusFooter /> : <MyFooter />
       )}
     </div>
   );
-}
+};
 
 const App = () => {
   return (
@@ -148,6 +116,6 @@ const App = () => {
       <AppContent />
     </BrowserRouter>
   );
-}
+};
 
 export default App;

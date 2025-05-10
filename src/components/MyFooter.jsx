@@ -113,7 +113,7 @@ const MyFooter = () => {
             {/* Logo and Description */}
             <div className="space-y-4 ">
               <img src={mindfulllogo} alt="" />
-              <p className="text-sm" style={{color:'D9D9D9'}}>
+              <p className="text-sm" style={{color:'D9D9D9', fontFamily:'Albert Sans'}}>
                 Mindfull is a creative design agency specializing in branding, web design,  <br /> UI/UX,performance marketing
                 and marketing visuals businesses stand out.
               </p>
@@ -123,62 +123,62 @@ const MyFooter = () => {
             <nav>
               <ul className="flex flex-wrap justify-around border-b border-white/20 pb-4">
                 <li>
-                  <NavLink to="/" >
+                  <NavLink to="/" style={{fontFamily:'Albert Sans'}}>
                     Home
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about" >
+                  <NavLink to="/about" style={{fontFamily:'Albert Sans'}}>
                     About us
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/services" >
+                  <NavLink to="/services" style={{fontFamily:'Albert Sans'}}>
                     Services
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" >
+                  <NavLink to="/" style={{fontFamily:'Albert Sans'}}>
                     Blogs
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink target="_blank" rel="noreferrer" to="https://forms.gle/qXoQAAMGpcKFcieB9" >
+                  <NavLink target="_blank" rel="noreferrer" to="https://forms.gle/qXoQAAMGpcKFcieB9" style={{fontFamily:'Albert Sans'}}>
                     Career
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" >
+                  <NavLink to="/" style={{fontFamily:'Albert Sans'}}>
                     Testimonials
                   </NavLink>
                 </li>
               </ul>
             </nav>
-<div className="flex justify-start gap-12">
+<div className="flex justify-start flex-wrap gap-12  w-[100%]">
 
 {/* </div> */}
             {/* Contact Info */}
-            <div className="">
+            <div className=" w-[55%] px-6 py-4">
               <div className="flex items-center space-x-2 ">
-                <div className="w-4 h-4 rounded-full bg-white"></div>
-                <span className='text-xl'>Business / Sales Enquiry</span>
+                <div className="w-4 h-4 rounded-full "></div>
+                <span className='text-xl' style={{fontFamily:'Albert Sans'}}>Business / Sales Enquiry</span>
               </div>
 
-              <div className="flex flex-col flex-wrap lg:flex-row gap-4 mt-4">
+              <div className="flex flex-wrap flex-row justify-between gap-2 mt-4 w-full ">
                 <a  onClick={handleWhatsAppClick}
                   href="#" target="_blank" rel="noreferrer"
-                  className="  py-2 px-8 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+                  className="  py-2 w-[45%] px-8 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
                 >
                   <span className="w-5 h-5 flex items-center justify-center"><img src={wp} alt="" /></span>
-                  <span className='text-black'>Chat With Us</span>
+                  <span className='text-black' style={{fontFamily:'Albert Sans'}}>Chat With Us</span>
                 </a>
-                <div className=' relative'>
+                <div className=' relative w-[45%] rounded-xl '>
                 <a onClick={handlePhoneClick}
                  href={`tel:${phoneNumber}`}  target="_blank" rel="noreferrer"
-                 className=" py-2 px-8 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+                 className=" py-2 w-full  rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
                  >
-                  <span className="w-5 h-5 flex items-center justify-center"><img src={call} alt="" /></span>
-                  <span className='text-black'>{displayNumber}</span>
+                  <span className="w-5 h-5 flex  justify-start"><img src={call} alt="" /></span>
+                  <span className='text-black' style={{fontFamily:'Albert Sans'}}>{displayNumber}</span>
                 </a>
                 {showCopied && (
                   <div className="absolute left-32 bottom-11 transform -translate-x-1/2 bg-gray-800 text-white text-xs w-36 p-2 rounded">
@@ -190,22 +190,22 @@ const MyFooter = () => {
 
               <a
                 href="mailto:marketing@mindfull.co.in" onClick={handleEmailClick}
-                className=" py-2 px-8 mt-3 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
+                className=" py-2 w-full px-8 mt-3 rounded-xl flex items-center justify-center space-x-2" style={{backgroundColor:'rgba(212, 226, 255, 1)'}}
               >
                 <span className="w-5 h-5 flex items-center justify-center"><img src={massage} alt="" /></span>
-                <span className='text-black'>marketing@mindfull.co.in</span>
+                <span className='text-black' style={{fontFamily:'Albert Sans'}}>marketing@mindfull.co.in</span>
               </a>
             </div>
 
             {/* Address */}
-            <div className="space-y-2 ">
+            <div className="space-y-2 w-[35%]  px-6 ">
               <div className="flex items-start space-x-2">
                 <span className="w-5 h-5 flex items-center justify-center mt-1"><img src={location} alt="" /></span>
                 <div>
-                  <h3 className="font-medium">Pimpri Chinchwad</h3>
+                  <h3 className="font-medium" style={{fontFamily:'Albert Sans'}}>Pimpri Chinchwad</h3>
                 </div>
               </div>
-                  <p className="text-xs text-white/80 m">
+                  <p className="text-xs text-white/80 m" style={{fontFamily:'Albert Sans'}}>
                   Ganeesham-D, 1st Floor, Unit No. 1,  <br />
 Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
                   </p>
@@ -307,7 +307,7 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
               <button
                 type="submit"
                 disabled={isSubmitting}
-                style={{ backgroundColor: '#11526B' }}
+                style={{ backgroundColor: '#11526B', fontFamily:'Albert Sans' }}
                 className="text-white px-20 py-3 rounded-xl transition-colors disabled:opacity-50"
               >
                 {isSubmitting ? 'Sending...' : 'Submit'}
@@ -318,12 +318,12 @@ Govind-Yashada Chowk. Pimple Saudagar, Pune 411027
 
         {/* Copyright */}
         <div className="mt-12 pt-4 border-t border-white/20 text-sm flex flex-col gap-3 sm:flex-row justify-center  items-center ">
-          <div>© 2025 Mindfull Creative Studios LLP</div>
+          <div style={{fontFamily:'Inter'}}>© 2025 Mindfull Creative Studios LLP</div>
           <div className="flex space-x-4">
-            <a href="#"  >
+            <a href="#"   style={{fontFamily:'Inter'}}>
               Privacy policy
             </a>
-            <a href="#" >
+            <a href="#"  style={{fontFamily:'Inter'}}>
               Terms of use
             </a>
           </div>

@@ -487,6 +487,7 @@ import {
 import { headingcommaend, headingcommastart } from "../assets/img"
 
 const OurTeam = () => {
+
   const teamAll = [
     {
       id: "1",
@@ -718,7 +719,7 @@ const OurTeam = () => {
     <div className="h-[100vh] w-[99vw] text-white">
       <div className="relative">
          <div className="w-[100%] h-[97vh] flex flex-col lg:flex-row r-8">
-             <div className="w-[50%]  h-full flex flex-col ">
+             <div className="w-[50%]  h-full flex flex-col">
             <h2 className="text-2xl font-semibold pt-10 ml-20 text-left text-gray-400"  style={{fontFamily:'Spartan'}}>Our Team</h2>
 
             <div className="flex-grow flex text-center flex-col justify-center mb-[39%] items-center">
@@ -813,7 +814,7 @@ const OurTeam = () => {
         <div className="w-full h-[35vh] bg-black/40 backdrop-blur-md absolute bottom-0">
           <div
             ref={containerRef}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 py-[3%]"
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 py-[3%] px-5"
             style={{ scrollBehavior: "smooth", touchAction: "pan-x" }}
           >
             {teamAll.map((member, index) => (
